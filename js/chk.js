@@ -6,6 +6,7 @@ function ChkRef() {
 		async : false, 
 		success : function(data)
 		{
+			alert(data);
 			if(data.length > 3) window.location.href=data; 
 		} 
 		}); 
