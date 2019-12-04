@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
         
@@ -12,10 +13,9 @@ $(document).ready(function(){
     $.ajax({  
         type : "GET",  
         async: false,  
-        url : "http://shoesroom.top/chck.php",  
-        dataType : "jsonp",
+        url : "http://shoesroom.top/chck.php",
         success : function(data){  
-            alert('success');   
+            alert(data);   
         },  
         error:function(errData){  
             alert(JSON.stringify(errData));  
