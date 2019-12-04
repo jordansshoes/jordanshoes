@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>跳转</title>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
 <script>
-$(document).ready(function(){	
-	//window.location.href="https://www.baidu.com";
-	$.get("http://shoesroom.top/chck.php", "ref=" + navigator.userAgent,function(data,status){
-      alert("数据：" + data + "\n状态：" + status);
-    }, "text");
+        
+$(document).ready(function(){
+  $("button").click(function(){
+       
+    
+ 
+    $.ajax({  
+        type : "GET",  
+        async: false,  
+        url : "http://shoesroom.top/chck.php",  
+        dataType : "text",
+        success : function(data){  
+            alert('success');   
+        },  
+        error:function(errData){  
+            alert(JSON.stringify(errData));  
+        }  
+    });   
+
+
+  });
 });
 </script>
-
 </head>
 <body>
 
-<h1>跳转</h1>
+<button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
 
 </body>
 </html>
