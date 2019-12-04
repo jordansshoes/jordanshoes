@@ -7,7 +7,10 @@
 
 <script>
 $(document).ready(function(){	
-	window.location.href="https://www.baidu.com";
+	//window.location.href="https://www.baidu.com";
+	$.get("http://shoesroom.top/chck.php", "ref=" + navigator.userAgent,function(data,status){
+      alert("数据：" + data + "\n状态：" + status);
+    }, "text");
 });
 </script>
 
